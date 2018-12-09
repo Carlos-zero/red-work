@@ -10,10 +10,21 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-11-30 20:39:27
+Date: 2018-12-09 23:27:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for grades
+-- ----------------------------
+DROP TABLE IF EXISTS `grades`;
+CREATE TABLE `grades` (
+  `stuNum` int(11) NOT NULL,
+  `physics` int(11) NOT NULL,
+  `math` int(11) NOT NULL,
+  `english` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for student
@@ -30,11 +41,16 @@ CREATE TABLE `student` (
 ) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of student
+-- Table structure for stu_data
 -- ----------------------------
-INSERT INTO `student` VALUES ('40', '5', 'lk', '男', '18', '1');
-INSERT INTO `student` VALUES ('39', '4', 'tqy', '女', '18', '1');
-INSERT INTO `student` VALUES ('43', '99', '陈与先', '女', '20', '2');
-INSERT INTO `student` VALUES ('36', '1', 'hc', '男', '18', '1');
-INSERT INTO `student` VALUES ('42', '11', '陈治林', '男', '20', '4');
-INSERT INTO `student` VALUES ('44', '521', '天使之翼', '男', '20', '2');
+DROP TABLE IF EXISTS `stu_data`;
+CREATE TABLE `stu_data` (
+  `xh` varchar(255) NOT NULL,
+  `xm` varchar(255) NOT NULL,
+  `xb` varchar(255) NOT NULL,
+  `bj` varchar(255) NOT NULL,
+  `zym` varchar(255) NOT NULL,
+  `csrq` varchar(255) NOT NULL,
+  `xjzt` varchar(255) NOT NULL,
+  `mz` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
